@@ -132,13 +132,18 @@ async def auto_delete(app):
 
 # ---------- Main ----------
 if __name__ == "__main__":
+    import threading
+
     app = ApplicationBuilder().token(BOT_TOKEN).build()
 
     app.add_handler(MessageHandler(filters.VIDEO, handle_video))
     app.add_handler(CommandHandler("start", start))
 
-    # Start auto-delete loop
-    app.job_queue.run_once(lambda ctx: asyncio.create_task(auto_delete(app)), when=5)
+    # Start auto-delete loop in background
+    def start_background_loop():
+        asyncio.run(auto_delete(app))
+
+    threading.Thread(target=start_background_loop, daemon=True).start()
 
     logger.info("Corn World Bot started!")
     app.run_polling()
