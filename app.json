@@ -26,7 +26,7 @@
     },
     "FORCE_JOIN_CHANNEL": {
       "description": "Username or ID of the channel users must join",
-      "value": "@corn_world_bot_backup"
+      "value": "@bot_backup"
     },
     "DEVELOPER_USERNAME": {
       "description": "Your Telegram username (for button)",
