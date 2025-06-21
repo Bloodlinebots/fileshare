@@ -1,0 +1,45 @@
+{
+  "name": "corn-world-bot",
+  "description": "Telegram bot that delivers videos with timed auto-delete and force join.",
+  "repository": "https://github.com/bloodlinebots/fileshare",
+  "keywords": ["telegram", "bot", "python", "auto-delete", "heroku"],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your Telegram Bot Token",
+      "required": true
+    },
+    "MONGO_URI": {
+      "description": "MongoDB Atlas connection URI",
+      "required": true
+    },
+    "ADMIN_IDS": {
+      "description": "Admin Telegram user IDs (comma-separated)",
+      "value": "7755789304"
+    },
+    "VAULT_CHANNEL_ID": {
+      "description": "ID of the vault channel (for storing videos)",
+      "value": "-1002810591637"
+    },
+    "MAIN_CHANNEL_ID": {
+      "description": "ID of the main channel (where preview + links are posted)",
+      "value": "-1002799718375"
+    },
+    "FORCE_JOIN_CHANNEL": {
+      "description": "Username or ID of the channel users must join",
+      "value": "@corn_world_bot_backup"
+    },
+    "DEVELOPER_USERNAME": {
+      "description": "Your Telegram username (for button)",
+      "value": "unbornvillian"
+    },
+    "BOT_USERNAME": {
+      "description": "Your bot's username (without @)",
+      "value": "corn_world_robot"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
