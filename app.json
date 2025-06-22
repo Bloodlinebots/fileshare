@@ -20,10 +20,6 @@
       "description": "ID of the vault channel (for storing videos)",
       "value": "-1002810591637"
     },
-    "MAIN_CHANNEL_ID": {
-      "description": "ID of the main channel (where preview + links are posted)",
-      "value": "-1002799718375"
-    },
     "FORCE_JOIN_CHANNEL": {
       "description": "Username or ID of the channel users must join",
       "value": "@bot_backup"
