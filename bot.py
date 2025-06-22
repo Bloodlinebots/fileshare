@@ -132,7 +132,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 InlineKeyboardButton("🔞 Tharki Hub Bot", url="https://t.me/tharki_hub_bot")
             ]]
             await update.message.reply_photo(
-                photo="https://telegra.ph/file/6e3fdcfb0cf67cf34c178.jpg",
+                photo="https://graph.org/file/16b1a2828cc507f8048bd.jpg",
                 caption="👋 Welcome to Corn World Bot!",
                 reply_markup=InlineKeyboardMarkup(btn)
             )
@@ -152,7 +152,7 @@ async def auto_delete(app):
                     await app.bot.delete_message(chat_id=doc["chat_id"], message_id=doc["message_id"])
                     await app.bot.send_message(
                         chat_id=doc["chat_id"],
-                        text="✅ Video deleted successfully.\nJoin @corn_world_bot_backup for more!"
+                        text="✅ Video deleted successfully.\nJoin @bot_backup for more!"
                     )
                     collection.delete_one({"_id": doc["_id"]})
                 except Exception as e:
